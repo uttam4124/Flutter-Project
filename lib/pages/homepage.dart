@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
-class Homepage extends StatelessWidget {
-final days=40;
+// import 'package:flutter_catalog/widgets/drawer.dart';
+import 'package:project_flutter/utils/widgets/drawer.dart';
+
+class HomePage extends StatelessWidget {
+  final int days = 30;
+  final String name = "Challenge";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Project_flutter"),
+        title: Text("Catalog App"),
       ),
-       body:Center(
-         child:Container(
-           child:Text("Welcome to $days days of flutter"),
-         ),
-       ),
-       drawer:Drawer(),
-     );
+      body: Center(
+        child: Container(
+          child: Text("Welcome to $days days of flutter of $name"),
+        ),
+      ),
+      drawer: Mydrawer(),
+    );
   }
 }
-
